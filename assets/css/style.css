@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f7f7fc;
+  color: #22223b;
+}
+
+.navbar {
+  background: #22223b;
+  color: #fff;
+  padding: 12px 0;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: auto;
+}
+
+.logo img {
+  height: 32px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #e0aaff;
+}
+
+.hero {
+  text-align: center;
+  padding: 48px 0 20px 0;
+  background: linear-gradient(135deg, #4ea8de 0%, #e0aaff 100%);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+main {
+  max-width: 900px;
+  margin: 32px auto 0 auto;
+  padding: 20px;
+}
+
+.posts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.post-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 18px rgba(30, 34, 90, 0.06);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: fadeInScale 0.7s cubic-bezier(0.31,1.21,0.77,1.02);
+}
+
+@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.96);}
+  100% { opacity: 1; transform: scale(1);}
+}
+
+.post-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 32px rgba(30, 34, 90, 0.13);
+}
+
+.post-thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #eee;
+}
+
+.post-content {
+  padding: 20px;
+}
+
+.post-title {
+  font-size: 1.3rem;
+  margin: 0 0 10px 0;
+}
+
+.post-desc {
+  color: #4a4e69;
+  margin-bottom: 18px;
+  font-size: 1rem;
+}
+
+a.post-link {
+  color: #4ea8de;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  transition: color 0.2s;
+}
+
+a.post-link:hover {
+  color: #22223b;
+}
+
+footer {
+  background: #22223b;
+  color: #bcbcbc;
+  text-align: center;
+  padding: 22px 0;
+  margin-top: 30px;
+  font-size: 0.96rem;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  main {
+    padding: 10px;
+  }
+  .container {
+    padding: 0 8px;
+  }
+}
