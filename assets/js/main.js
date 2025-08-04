@@ -1,4 +1,3 @@
-// Fetch blog post metadata and render cards
 document.addEventListener('DOMContentLoaded', () => {
   fetch('./assets/posts.json')
     .then(res => res.json())
@@ -8,21 +7,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
       posts.forEach(post => {
         const card = document.createElement('div');
-        card.className = 'post-card';
+        card.className = 'col'; // Bootstrap grid column
 
         card.innerHTML = `
-          <img src="${post.thumb}" alt="${post.title}" class="post-thumb" loading="lazy">
-          <div class="post-content">
-            <h2 class="post-title">${post.title}</h2>
-            <p class="post-desc">${post.desc}</p>
-            <a href="./posts/${post.file}" class="post-link">Read More &rarr;</a>
+          <div class="card h-100 shadow-sm">
+            <img src="${post.thumb}" class="card-img-top" alt="${post.title}" loading="lazy" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">${post.title}</h5>
+              <p class="card-text flex-grow-1">${post.desc}</p>
+              <a href="./posts/${post.file}" class="btn btn-primary mt-auto">Read More &rarr;</a>
+            </div>
           </div>
         `;
 
         container.appendChild(card);
       });
     })
-    .catch(err => {
+    .catch(() => {
       document.getElementById('posts-list').innerHTML =
         "<p>Could not load posts. Please check your posts.json file.</p>";
     });
