@@ -1,0 +1,14 @@
+[
+  {
+    "file": "post1.html",
+    "title": "Getting Started with Static Blogs",
+    "desc": "A practical guide to launching your blog with HTML, CSS, and JavaScript on GitHub Pages.",
+    "thumb": "../assets/images/post1-thumb.jpg"
+  },
+  {
+    "file": "post2.html",
+    "title": "Why Manual Blogs Can Be Awesome",
+    "desc": "Uncover the magic of manually curated static blogs for ultimate flexibility.",
+    "thumb": "../assets/images/post2-thumb.jpg"
+  }
+]
